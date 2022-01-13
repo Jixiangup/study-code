@@ -1,8 +1,5 @@
 package com.bnyte.thread.acreateanduse;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 买票窗口
  *
@@ -12,23 +9,30 @@ import java.util.List;
  */
 public class AWindow extends Thread {
 
-    private static int ticket = 3;
+    private static int ticket = 100;
 
     @Override
     public void run() {
+        while (true) {
+            synchronized ("1") {
+                if (ticket > 0) {
+                    System.out.println(getName() + "卖的票号为: " + ticket);
+                    ticket--;
+                } else break;
+            }
+        }
     }
 }
 
 class WindowTest {
+
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        for (Integer integer : list ) {
-            if (integer == 3) list.remove(integer);
-            System.out.println(list);
-        }
+        AWindow window1 = new AWindow();
+        AWindow window2 = new AWindow();
+        window2.setName("窗口2");
+        window1.setName("窗口1");
+        window1.start();
+        window2.start();
+
     }
 }
