@@ -13,7 +13,6 @@ public class AWindow extends Thread {
 
     @Override
     public void run() {
-        
         while (true) {
             synchronized ("1") {
                 if (ticket > 0) {
