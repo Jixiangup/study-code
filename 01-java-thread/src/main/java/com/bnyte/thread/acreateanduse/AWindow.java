@@ -33,6 +33,5 @@ class WindowTest {
         window1.setName("窗口1");
         window1.start();
         window2.start();
-
     }
 }
