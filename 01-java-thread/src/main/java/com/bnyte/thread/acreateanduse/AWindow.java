@@ -27,11 +27,13 @@ public class AWindow extends Thread {
 class WindowTest {
 
     public static void main(String[] args) {
+
         AWindow window1 = new AWindow();
         AWindow window2 = new AWindow();
         window2.setName("窗口2");
         window1.setName("窗口1");
         window1.start();
         window2.start();
+
     }
 }
