@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSE Starter</title>
+</head>
+<body>
+测试sse starter
+<script>
+    const eventSource = new EventSource("http://127.0.0.1:8080/sse/starter/1");
+    eventSource.addEventListener('message', (message) => {
+        console.log('message', message);
+    })
+</script>
+</body>
+</html>

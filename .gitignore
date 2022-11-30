@@ -77,6 +77,8 @@ Thumbs.db
 # Build output directies
 /target
 */target
+/classes
+*/classes
 /build
 */build
 

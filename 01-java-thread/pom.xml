@@ -4,9 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bnyte</groupId>
+    <parent>
+        <groupId>com.bnyte</groupId>
+        <version>1.0.0</version>
+        <artifactId>study-code</artifactId>
+    </parent>
+
     <artifactId>01-java-thread</artifactId>
-    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
